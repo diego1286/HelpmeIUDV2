@@ -8,6 +8,7 @@ public class BackendHelpmedV2Application {
 
     public static void main(String[] args) {
         SpringApplication.run(BackendHelpmedV2Application.class, args);
+        System.out.println("corre forest corre tu puedes !!!!!!!!!!!!!!" );
     }
 
 }
