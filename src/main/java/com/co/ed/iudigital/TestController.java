@@ -13,7 +13,7 @@ public class TestController {
     public ResponseEntity<String> test(){
         return ResponseEntity.ok().body("coreecto le pegaste a donde es!!!!!!!!!");
         // se crea el metodo responseEntity que regrea un string  en forma de json  con el body que se le envie
-        // por parametro esta parte esta en la clase del diplomado del 13/07/2022 del diplomado 2022
+        // por parametro esta parte esta en la clase del diplomado del 13/07/2022 del diplomado 2022 desde ahi inician la aplicacion spring
         // esto crea el empoint donde se coencta como punto final a la aplicacion
     }
 }
