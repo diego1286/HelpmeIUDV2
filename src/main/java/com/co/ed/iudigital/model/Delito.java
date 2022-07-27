@@ -19,14 +19,12 @@ public class Delito implements Serializable {
     @Column(name = "descripcion", length = 255, nullable = false)
     private String descripcion;
 
-//TODO: leer sobre las anotaciones en hibernate jpa
-    /*
+    @ManyToOne(cascade = CascadeType.ALL) // por default: fetch = EAGER
+    @JoinColumn(name = "usuarios_id")
+    private  Usuario usuario;
+    //anotacion de muchos a uno va la relacion de aca para usuario  ve a a tabla usuario para ver
 
-    usuarios_id INT NOT NULL,
-    PRIMARY KEY (id),
-    FOREIGN KEY (usuarios_id) REFERENCES usuarios(id)
-    );
-     */
+//TODO: leer sobre las anotaciones en hibernate jpa
 
     public Delito() {
     }

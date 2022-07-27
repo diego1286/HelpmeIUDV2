@@ -2,6 +2,8 @@ package com.co.ed.iudigital.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
+
 // se debe anotar con entity para convertir la tabla en un bean de spring, luego la anotacion de table para mapear la tabla en bd
 @Entity
 @Table(name = "roles")
@@ -26,6 +28,18 @@ public class Role implements Serializable {
     se deben crear los get y set para poder obtener los valores que se quieren esto por el encapsulamiento de POO tambien creer el constructor
     vacio para poder crear el objeto instanciado cuando se quiera crear
      */
+
+
+    @ManyToMany(mappedBy = "roles")
+    private List<Usuario> usuarios;// relacion vidireccional
+
+    public List<Usuario> getUsuarios() {
+        return usuarios;
+    }
+
+    public void setUsuarios(List<Usuario> usuarios) {
+        this.usuarios = usuarios;
+    }
 
     public Long getId() {
         return id;
