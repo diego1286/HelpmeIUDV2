@@ -18,8 +18,4 @@ public class RoleServiceImpl  implements IRoleService {
     public List<Role> getAll() {
         return roleRepository.findAll();
     }
-
-
-
-
 }

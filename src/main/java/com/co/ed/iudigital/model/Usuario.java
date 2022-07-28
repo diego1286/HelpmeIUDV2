@@ -15,7 +15,8 @@ public class Usuario implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)// Se le dice que es autoincrementable a la llave primaria, se le pasa la estrategia de auto
     private  Long id;
     @Column(name = "username", length = 120, nullable = false, unique = true)
-    private String userName;
+    private String username;
+
     @Column(name = "nombre", length = 120, nullable = false)
     private String nombre;
     @Column(name = "apellido", length = 120, nullable = false)
@@ -104,11 +105,11 @@ public class Usuario implements Serializable {
     }
 
     public String getUserName() {
-        return userName;
+        return username;
     }
 
     public void setUserName(String userName) {
-        this.userName = userName;
+        this.username = userName;
     }
 
     public String getNombre() {

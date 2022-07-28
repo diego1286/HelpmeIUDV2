@@ -1,11 +1,13 @@
 package com.co.ed.iudigital.service;
 
 import com.co.ed.iudigital.model.Role;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-public interface IRoleService  {
+@Service
+public interface IRoleService {
+
 
     List<Role> getAll();
 }
